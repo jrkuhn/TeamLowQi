@@ -14,7 +14,7 @@ $(document).ready(function() {
     Calc.T1 = $("#temp1").html();
     Calc.T2 = $("#temp2").html();
 
-    $('body').click(function(e){
+    $('body').on('click touchstart', function(e){
         var action = e.target.id;
         var num1 = parseInt($('#temp1').html());
         var num2 = parseInt($('#temp2').html());
