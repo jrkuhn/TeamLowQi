@@ -14,7 +14,7 @@ $(document).ready(function() {
     Calc.T1 = $("#temp1").html();
     Calc.T2 = $("#temp2").html();
 
-    $('body').on('click touchstart', function(e){
+    $('body').on('click touch', function(e){
         var action = e.target.id;
         var num1 = parseInt($('#temp1').html());
         var num2 = parseInt($('#temp2').html());
@@ -89,11 +89,16 @@ $(document).ready(function() {
                 break;
 
             case 'coin':
-                alert("coin");
+                rand = Math.floor(Math.random() * (2))+1;
+                if(rand == 2)
+                    alert("TAILS");
+                else
+                    alert("HEADS");
                 break;
 
             case 'dice':
-                alert("dice");
+                rand = Math.floor(Math.random() * (6))+1;
+                alert(rand);
                 break;
 
             case 'close1':
