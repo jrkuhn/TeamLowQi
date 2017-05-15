@@ -38,6 +38,7 @@
     div#player1 {
         position: relative;
         margin-top: 84px;
+        margin-left: 36px;
         width: 270px;
         height: 102px;
         background-color: white;
@@ -47,7 +48,8 @@
     }
     div#player2 {
         position: relative;
-        margin-top: 55px;
+        margin-top: 52px;
+        margin-left: 36px;
         width: 270px;
         height: 102px;
         background-color: white;
@@ -56,17 +58,16 @@
         text-align: center;
     }
     div#middle {
-        margin-top: 55px;
+        margin-top: 52px;
         text-align: center;
         position: relative;
-        margin-left: 103px;
-        width: 67px;
-        height: 125px;
+        margin-left: 137px;
+        width: 66px;
+        height: 130px;
         background-color: white;
         border: 1px solid black;
         transform: rotate(90deg);
     }
-
 
     .LP{
         padding-top: 15px;
@@ -77,45 +78,56 @@
         font-family: 'lifepoints', sans-serif;
         text-align: center;
     }
+    .miniLP{
+        margin-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        font-size: 48px;
+        color: gold;
+        background-color: #1b74a6;
+        font-family: 'lifepoints', sans-serif;
+        text-align: center;
+    }
 
     .plus{
-        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 32px;
         position: relative;
         border: none;
         outline: none;
         text-decoration: none;
         border-radius: 5px;
-        padding: 15px 25px;
+        padding: 5px 27px;
         background-color: #00ff00;
         box-shadow: 0px 5px 0px 0px #19ce5a;
-        font-size: 22px;
     }
     .plus:active{
         -webkit-transform: translate(0px, 3px);
-        transform: translate(0px, 3px);
-        box-shadow: 0px 1px 0px 0px;
+        transform: translate(0px, 4px);
+        box-shadow: 0px 0px 0px 0px;
     }
 
     .minus{
-        margin-top: 10px;
+        margin-left: 10px;
         position: relative;
+        font-size: 32px;
         border: none;
         outline: none;
         text-decoration: none;
         border-radius: 5px;
-        padding: 15px 27px;
+        padding: 4px 30px 6px 30px;
         background-color: #ff0000;
         box-shadow: 0px 5px 0px 0px #ce0320;
-        font-size: 22px;
+
     }
     .minus:active{
         -webkit-transform: translate(0px, 3px);
-        transform: translate(0px, 3px);
-        box-shadow: 0px 1px 0px 0px;
+        transform: translate(0px, 4px);
+        box-shadow: 0px 0px 0px 0px;
     }
 
     .middle{
-        margin-top: 12px;
+        margin-top: 8px;
         border: none;
         outline: none;
         text-decoration: none;
@@ -129,16 +141,16 @@
     .middle:active{
         -webkit-transform: translate(0px, 3px);
         transform: translate(0px, 1px);
-        box-shadow: 0px 2px 0px 0px;
+        box-shadow: 0px 1px 0px 0px;
     }
 
     .popup{
         display: none;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 330px;
-        height: 250px;
+        top: 40%;
+        left: 21%;
+        width: 440px;
+        height: 340px;
         margin-top: -115px;
         margin-left: -125px;
         background: #fff;
@@ -152,7 +164,6 @@
         transform: rotate(90deg);
     }
     .rotatep2{
-
         transform: rotate(270deg);
     }
     .popup-close{
@@ -180,22 +191,29 @@
     }
 
     .num{
-        margin-top: 10px;
+        margin-left: 10px;
         border: none;
         outline: none;
         text-decoration: none;
         border-radius: 5px;
         padding: 15px 25px;
         background-color: #6c92be;
-        box-shadow: 0px 2px 0px 0px #3d63a6;
+        box-shadow: 0px 4px 0px 0px #3d63a6;
         font-size: 18px;
         color: gold;
         font-family: 'lifepoints', sans-serif;
     }
     .num:active{
         -webkit-transform: translate(0px, 3px);
-        transform: translate(0px, 2px);
+        transform: translate(0px, 3px);
         box-shadow: 0px 2px 0px 0px;
+    }
+    .Lil{
+        font-size: 20px;
+        padding: 15px 29px;
+    }
+    p {
+        white-space: pre;
     }
 
 </style>
@@ -221,37 +239,35 @@
     </div>
 
     <div class="popup rotatep1" id="pop1">
-        <div class="LP" id="temp1">0</div>
+        <div class="miniLP" id="temp1">0</div>
         <span class="popup-close" id="close1">X</span>
-        <button class="num" id="pop1num1" value='1'>1</button>
+        <button class="num Lil" id="pop1num1" value='1'>1</button>
         <button class="num" id="pop1num2" value='2'>2</button>
-        <button class="num" id="pop1num3" value='3'>3</button>
+        <button class="num" id="pop1num3" value='3'>3</button><p></p>
         <button class="num" id="pop1num4" value='4'>4</button>
         <button class="num" id="pop1num5" value='5'>5</button>
-        <button class="num" id="pop1num6" value='6'>6</button>
+        <button class="num" id="pop1num6" value='6'>6</button><p></p>
         <button class="num" id="pop1num7" value='7'>7</button>
         <button class="num" id="pop1num8" value='8'>8</button>
-        <button class="num" id="pop1num9" value='9'>9</button>
+        <button class="num" id="pop1num9" value='9'>9</button><p></p>
         <button class="num" id="pop1num0" value='0'>0</button>
-        <button class="plus" id="enter1">calculate</button>
         <button class="plus" id="plus1" value="+">+</button>
         <button class="minus" id="minus1" value="-">-</button>
 
     </div>
     <div class="popup rotatep2" id="pop2">
-        <div class="LP" id="temp2">0</div>
+        <div class="miniLP" id="temp2">0</div>
         <span class="popup-close" id="close2">X</span>
-        <button class="num" id="pop2num1" value='1'>1</button>
+        <button class="num Lil" id="pop2num1" value='1'>1</button>
         <button class="num" id="pop2num2" value='2'>2</button>
-        <button class="num" id="pop2num3" value='3'>3</button>
+        <button class="num" id="pop2num3" value='3'>3</button><p></p>
         <button class="num" id="pop2num4" value='4'>4</button>
         <button class="num" id="pop2num5" value='5'>5</button>
-        <button class="num" id="pop2num6" value='6'>6</button>
+        <button class="num" id="pop2num6" value='6'>6</button><p></p>
         <button class="num" id="pop2num7" value='7'>7</button>
         <button class="num" id="pop2num8" value='8'>8</button>
-        <button class="num" id="pop2num9" value='9'>9</button>
+        <button class="num" id="pop2num9" value='9'>9</button><p></p>
         <button class="num" id="pop2num0" value='0'>0</button>
-        <button class="plus" id="enter2">calculate</button>
         <button class="plus" id="plus2" value="+">+</button>
         <button class="minus" id="minus2" value="-">-</button>
     </div>
