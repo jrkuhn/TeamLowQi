@@ -48,7 +48,7 @@
     }
     div#player2 {
         position: relative;
-        margin-top: 52px;
+        margin-top: 53px;
         margin-left: 36px;
         width: 270px;
         height: 102px;
@@ -58,7 +58,7 @@
         text-align: center;
     }
     div#middle {
-        margin-top: 52px;
+        margin-top: 53px;
         text-align: center;
         position: relative;
         margin-left: 137px;
@@ -83,6 +83,7 @@
         padding-top: 10px;
         padding-bottom: 15px;
         font-size: 48px;
+        min-height:30px;
         color: gold;
         background-color: #1b74a6;
         font-family: 'lifepoints', sans-serif;
@@ -91,13 +92,13 @@
 
     .plus{
         margin-left: 10px;
-        font-size: 32px;
+        font-size: 24px;
         position: relative;
         border: none;
         outline: none;
         text-decoration: none;
         border-radius: 5px;
-        padding: 5px 27px;
+        padding: 7px 27px;
         background-color: #00ff00;
         box-shadow: 0px 5px 0px 0px #19ce5a;
     }
@@ -109,13 +110,12 @@
 
     .minus{
         margin-left: 10px;
-        position: relative;
-        font-size: 32px;
+        font-size: 24px;
         border: none;
         outline: none;
         text-decoration: none;
         border-radius: 5px;
-        padding: 4px 30px 6px 30px;
+        padding: 6px 30px 8px 30px;
         background-color: #ff0000;
         box-shadow: 0px 5px 0px 0px #ce0320;
 
@@ -173,13 +173,13 @@
         border: none;
         outline: none;
         text-decoration: none;
-        padding: 0px 5px;
+        padding: 0px 7px;
         border-radius: 5px;
         color: #ce0320;
         background-color: #ff434b;
-        box-shadow: 0px 2px 0px 0px #ce0320;
+        box-shadow: 0px 3px 0px 0px #ce0320;
         font-family: Comic Sans,sans-serif;
-        font-size: 24px;
+        font-size: 32px;
         font-weight: bold;
         text-transform: uppercase;
         cursor: pointer;
@@ -187,7 +187,7 @@
     .popup-close:active{
         -webkit-transform: translate(0px, 3px);
         transform: translate(0px, 2px);
-        box-shadow: 0px 2px 0px 0px;
+        box-shadow: 0px 1px 0px 0px;
     }
 
     .num{
@@ -196,10 +196,10 @@
         outline: none;
         text-decoration: none;
         border-radius: 5px;
-        padding: 15px 25px;
+        padding: 13px 21px;
         background-color: #6c92be;
         box-shadow: 0px 4px 0px 0px #3d63a6;
-        font-size: 18px;
+        font-size: 22px;
         color: gold;
         font-family: 'lifepoints', sans-serif;
     }
@@ -209,8 +209,8 @@
         box-shadow: 0px 2px 0px 0px;
     }
     .Lil{
-        font-size: 20px;
-        padding: 15px 29px;
+        font-size: 24px;
+        padding: 13px 23px;
     }
     p {
         white-space: pre;
@@ -239,7 +239,7 @@
     </div>
 
     <div class="popup rotatep1" id="pop1">
-        <div class="miniLP" id="temp1">0</div>
+        <div class="miniLP" id="temp1" value=""> </div>
         <span class="popup-close" id="close1">X</span>
         <button class="num Lil" id="pop1num1" value='1'>1</button>
         <button class="num" id="pop1num2" value='2'>2</button>
@@ -250,13 +250,13 @@
         <button class="num" id="pop1num7" value='7'>7</button>
         <button class="num" id="pop1num8" value='8'>8</button>
         <button class="num" id="pop1num9" value='9'>9</button><p></p>
-        <button class="num" id="pop1num0" value='0'>0</button>
         <button class="plus" id="plus1" value="+">+</button>
+        <button class="num" id="pop1num0" value='0'>0</button>
         <button class="minus" id="minus1" value="-">-</button>
 
     </div>
     <div class="popup rotatep2" id="pop2">
-        <div class="miniLP" id="temp2">0</div>
+        <div class="miniLP" id="temp2" value=""> </div>
         <span class="popup-close" id="close2">X</span>
         <button class="num Lil" id="pop2num1" value='1'>1</button>
         <button class="num" id="pop2num2" value='2'>2</button>
@@ -267,8 +267,8 @@
         <button class="num" id="pop2num7" value='7'>7</button>
         <button class="num" id="pop2num8" value='8'>8</button>
         <button class="num" id="pop2num9" value='9'>9</button><p></p>
-        <button class="num" id="pop2num0" value='0'>0</button>
         <button class="plus" id="plus2" value="+">+</button>
+        <button class="num" id="pop2num0" value='0'>0</button>
         <button class="minus" id="minus2" value="-">-</button>
     </div>
 </div>
