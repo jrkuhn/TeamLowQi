@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- include relative stylesheet for Jquery Mobile-->
+
+    <!-- Include the jQuery library -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+
+
+    <link href='//fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+
+    <script src="LowQiCalc.js"></script>
+    <title>Team Low-Qi</title>
+</head>
+
+<style>
+
+    body{
+        background-image: url("MilleniumKey.jpg");
+        background-repeat: repeat;
+        background-size: 30px 50px;
+
+        top: 50%;
+        left: 50%;
+
+    }
+
+    @font-face{
+        font-family:'lifepoints';
+        src: url('fonts/Nationalyze-ALP.ttf');
+    }
+
+    div#player1 {
+        position: relative;
+        margin-top: 60px;
+        width: 190px;
+        height: 73px;
+        background-color: white;
+        border: 1px solid black;
+        transform: rotate(90deg);
+        text-align: center;
+    }
+    div#player2 {
+        position: relative;
+        width: 175px;
+        height: 120px;
+        background-color: white;
+        border: 1px solid black;
+        transform: rotate(270deg);
+        text-align: center;
+    }
+    div#middle {
+        margin-top: 15px;
+        text-align: center;
+        position: relative;
+        left: 70px;
+        width: 50px;
+        height: 125px;
+        background-color: white;
+        border: 1px solid black;
+        transform: rotate(90deg);
+    }
+
+
+    .LP{
+
+        padding: 6% 0% 8%;
+        font-size: 40px;
+        color: gold;
+        background-color: #1b74a6;
+        font-family: 'lifepoints', sans-serif;
+        text-align: center;
+    }
+
+    .plus{
+        margin-top: 10px;
+        position: relative;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 15px 25px;
+        background-color: #00ff00;
+        box-shadow: 0px 5px 0px 0px #19ce5a;
+        font-size: 22px;
+    }
+    .plus:active{
+        -webkit-transform: translate(0px, 3px);
+        transform: translate(0px, 3px);
+        box-shadow: 0px 1px 0px 0px;
+    }
+
+    .minus{
+        margin-top: 10px;
+        position: relative;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 15px 27px;
+        background-color: #ff0000;
+        box-shadow: 0px 5px 0px 0px #ce0320;
+        font-size: 22px;
+    }
+    .minus:active{
+        -webkit-transform: translate(0px, 3px);
+        transform: translate(0px, 3px);
+        box-shadow: 0px 1px 0px 0px;
+    }
+
+    .middle{
+        margin-top: 12px;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 2px 5px;
+        background-color: #6c92be;
+        box-shadow: 0px 2px 0px 0px #3d63a6;
+        color: #150E2D;
+        font-size: 18px;
+    }
+    .middle:active{
+        -webkit-transform: translate(0px, 3px);
+        transform: translate(0px, 1px);
+        box-shadow: 0px 2px 0px 0px;
+    }
+
+    .popup{
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 330px;
+        height: 250px;
+        margin-top: -115px;
+        margin-left: -125px;
+        background: #fff;
+        color: #333;
+        font-size: 19px;
+        line-height: 30px;
+        border: 10px solid #150E2D;
+        text-align: center;
+    }
+    .rotatep1{
+        transform: rotate(90deg);
+    }
+    .rotatep2{
+
+        transform: rotate(270deg);
+    }
+    .popup-close{
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        padding: 0px 5px;
+        border-radius: 5px;
+        color: #ce0320;
+        background-color: #ff434b;
+        box-shadow: 0px 2px 0px 0px #ce0320;
+        font-family: Comic Sans,sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .popup-close:active{
+        -webkit-transform: translate(0px, 3px);
+        transform: translate(0px, 2px);
+        box-shadow: 0px 2px 0px 0px;
+    }
+
+    .num{
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 15px 25px;
+        background-color: #6c92be;
+        box-shadow: 0px 2px 0px 0px #3d63a6;
+        font-size: 18px;
+        color: gold;
+        font-family: 'lifepoints', sans-serif;
+    }
+    .num:active{
+        -webkit-transform: translate(0px, 3px);
+        transform: translate(0px, 2px);
+        box-shadow: 0px 2px 0px 0px;
+    }
+
+</style>
+
+
+<body>
+
+<div id="calc">
+
+    <div id="player1">
+        <div class="LP" id="LP1" >8000</div>
+
+    </div>
+
+    <div id="middle">
+        <button class="middle" id="reset">reset</button>
+        <button class="middle" id="coin">coin</button>
+        <button class="middle" id="dice">dice</button>
+    </div>
+
+    <div id="player2">
+        <div class="LP" id="LP2" >8000</div>
+        <button class="plus" id="plus2" value="+">+</button>
+        <button class="minus" id="minus2" value="-">-</button>
+    </div>
+
+    <div class="popup rotatep1" id="pop1">
+        <div class="LP" id="temp1">0</div>
+        <span class="popup-close" id="close1">X</span>
+        <button class="num" id="pop1num1" value='1'>1</button>
+        <button class="num" id="pop1num2" value='2'>2</button>
+        <button class="num" id="pop1num3" value='3'>3</button>
+        <button class="num" id="pop1num4" value='4'>4</button>
+        <button class="num" id="pop1num5" value='5'>5</button>
+        <button class="num" id="pop1num6" value='6'>6</button>
+        <button class="num" id="pop1num7" value='7'>7</button>
+        <button class="num" id="pop1num8" value='8'>8</button>
+        <button class="num" id="pop1num9" value='9'>9</button>
+        <button class="num" id="pop1num0" value='0'>0</button>
+        <button class="plus" id="enter1">calculate</button>
+        <button class="plus" id="plus1" value="+">+</button>
+        <button class="minus" id="minus1" value="-">-</button>
+
+    </div>
+    <div class="popup rotatep2" id="pop2">
+        <div class="LP" id="temp2">0</div>
+        <span class="popup-close" id="close2">X</span>
+        <button class="num" id="pop2num1" value='1'>1</button>
+        <button class="num" id="pop2num2" value='2'>2</button>
+        <button class="num" id="pop2num3" value='3'>3</button>
+        <button class="num" id="pop2num4" value='4'>4</button>
+        <button class="num" id="pop2num5" value='5'>5</button>
+        <button class="num" id="pop2num6" value='6'>6</button>
+        <button class="num" id="pop2num7" value='7'>7</button>
+        <button class="num" id="pop2num8" value='8'>8</button>
+        <button class="num" id="pop2num9" value='9'>9</button>
+        <button class="num" id="pop2num0" value='0'>0</button>
+        <button class="plus" id="enter2">calculate</button>
+    </div>
+</div>
+
+</body>
+
+</html>
