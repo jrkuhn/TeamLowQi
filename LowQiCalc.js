@@ -6,7 +6,7 @@ Calc.log = [];
 
 
 //Controller
-$(document).ready(function() {
+window.onload = function () {
     Calc.init();
 
     Calc.LP1 = $("#LP1").html();
@@ -14,21 +14,22 @@ $(document).ready(function() {
     Calc.T1 = $("#temp1").html();
     Calc.T2 = $("#temp2").html();
 
-    $('body').on("click touchend", function(e){
-        var action = e.target.id;
+    var body = $('body');
+    body.on("click tap", function(Se){
+        var action = Se.target.id;
 
-        switch(action){
+        switch (action) {
             case 'plus1':
                 var T1 = $('#temp1');
                 var numT1 = parseInt(T1.html());
                 var LP1 = $('#LP1');
                 var LP = parseInt(LP1.html());
 
-                if(numT1 >= 1)
+                if (numT1 >= 1)
                     LP1.html(LP + numT1);
-                if(LP + numT1 > 9999) {
+                if (LP + numT1 > 9999) {
                     LP1.css('font-size', 46);
-                    LP1.css({"padding":"24px "});
+                    LP1.css({"padding": "24px "});
                 }
                 $('#pop1').hide();
                 T1.html("");
@@ -39,10 +40,10 @@ $(document).ready(function() {
                 var numT1 = parseInt(T1.html());
                 var LP1 = $('#LP1');
                 var LP = parseInt(LP1.html());
-                if(numT1 >= 1)
+                if (numT1 >= 1)
                     LP1.html(LP - numT1);
 
-                if(LP - numT1 < 0)
+                if (LP - numT1 < 0)
                     LP1.html(0);
 
                 $('#pop1').hide();
@@ -54,9 +55,9 @@ $(document).ready(function() {
                 var numT2 = parseInt(T2.html());
                 var LP2 = $('#LP2');
                 var LP = parseInt(LP2.html());
-                if(numT2 >= 0)
+                if (numT2 >= 0)
                     LP2.html(LP + numT2);
-                if(LP + numT2 > 9999) {
+                if (LP + numT2 > 9999) {
                     LP2.css('font-size', 46);
                     LP2.css({"padding": "24px "});
                 }
@@ -69,10 +70,10 @@ $(document).ready(function() {
                 var numT2 = parseInt(T2.html());
                 var LP2 = $('#LP2');
                 var LP = parseInt(LP2.html());
-                if(numT2 >= 0)
+                if (numT2 >= 0)
                     LP2.html(LP - numT2);
 
-                if(LP - numT2 < 0)
+                if (LP - numT2 < 0)
                     LP2.html(0);
 
                 $('#pop2').hide();
@@ -96,15 +97,15 @@ $(document).ready(function() {
                 break;
 
             case 'coin':
-                rand = Math.floor(Math.random() * (2))+1;
-                if(rand == 2)
+                rand = Math.floor(Math.random() * (2)) + 1;
+                if (rand == 2)
                     alert("TAILS");
                 else
                     alert("HEADS");
                 break;
 
             case 'dice':
-                rand = Math.floor(Math.random() * (6))+1;
+                rand = Math.floor(Math.random() * (6)) + 1;
                 alert(rand);
                 break;
 
@@ -120,84 +121,84 @@ $(document).ready(function() {
 
             case 'pop1num1':
                 var T1 = $('#temp1');
-                T1.html( T1.html() + document.getElementById("pop1num1").value);
+                T1.html(T1.html() + document.getElementById("pop1num1").value);
                 break;
             case 'pop1num2':
                 var T1 = $('#temp1');
-                T1.html( T1.html() + document.getElementById("pop1num2").value);
+                T1.html(T1.html() + document.getElementById("pop1num2").value);
                 break;
             case 'pop1num3':
                 var T1 = $('#temp1');
-                T1.html( T1.html() + document.getElementById("pop1num3").value);
+                T1.html(T1.html() + document.getElementById("pop1num3").value);
                 break;
             case 'pop1num4':
                 var T1 = $('#temp1');
-                T1.html( T1.html() + document.getElementById("pop1num4").value);
+                T1.html(T1.html() + document.getElementById("pop1num4").value);
                 break;
             case 'pop1num5':
                 var T1 = $('#temp1');
-                T1.html( T1.html() + document.getElementById("pop1num5").value);
+                T1.html(T1.html() + document.getElementById("pop1num5").value);
                 break;
             case 'pop1num6':
                 var T1 = $('#temp1');
-                T1.html( T1.html() + document.getElementById("pop1num6").value);
+                T1.html(T1.html() + document.getElementById("pop1num6").value);
                 break;
             case 'pop1num7':
                 var T1 = $('#temp1');
-                T1.html( T1.html() + document.getElementById("pop1num7").value);
+                T1.html(T1.html() + document.getElementById("pop1num7").value);
                 break;
             case 'pop1num8':
                 var T1 = $('#temp1');
-                T1.html( T1.html() + document.getElementById("pop1num8").value);
+                T1.html(T1.html() + document.getElementById("pop1num8").value);
                 break;
             case 'pop1num9':
                 var T1 = $('#temp1');
-                T1.html( T1.html() + document.getElementById("pop1num9").value);
+                T1.html(T1.html() + document.getElementById("pop1num9").value);
                 break;
             case 'pop1num0':
                 var T1 = $('#temp1');
-                T1.html( T1.html() + document.getElementById("pop1num0").value);
+                T1.html(T1.html() + document.getElementById("pop1num0").value);
                 break;
 
             case 'pop2num1':
                 var T2 = $('#temp2');
-                T2.html( T2.html() + document.getElementById("pop2num1").value);
+                T2.html(T2.html() + document.getElementById("pop2num1").value);
                 break;
             case 'pop2num2':
                 var T2 = $('#temp2');
-                T2.html( T2.html() + document.getElementById("pop2num2").value);
+                T2.html(T2.html() + document.getElementById("pop2num2").value);
                 break;
             case 'pop2num3':
                 var T2 = $('#temp2');
-                T2.html( T2.html() + document.getElementById("pop2num3").value);
+                T2.html(T2.html() + document.getElementById("pop2num3").value);
                 break;
             case 'pop2num4':
                 var T2 = $('#temp2');
-                T2.html( T2.html() + document.getElementById("pop2num4").value);
+                T2.html(T2.html() + document.getElementById("pop2num4").value);
                 break;
             case 'pop2num5':
                 var T2 = $('#temp2');
-                T2.html( T2.html() + document.getElementById("pop2num5").value);
+                T2.html(T2.html() + document.getElementById("pop2num5").value);
                 break;
             case 'pop2num6':
                 var T2 = $('#temp2');
-                T2.html( T2.html() + document.getElementById("pop2num6").value);
+                T2.html(T2.html() + document.getElementById("pop2num6").value);
                 break;
             case 'pop2num7':
                 var T2 = $('#temp2');
-                T2.html( T2.html() + document.getElementById("pop2num7").value);
+                T2.html(T2.html() + document.getElementById("pop2num7").value);
                 break;
             case 'pop2num8':
                 var T2 = $('#temp2');
-                T2.html( T2.html() + document.getElementById("pop2num8").value);
+                T2.html(T2.html() + document.getElementById("pop2num8").value);
                 break;
             case 'pop2num9':
                 var T2 = $('#temp2');
-                T2.html( T2.html() + document.getElementById("pop2num9").value);
+                T2.html(T2.html() + document.getElementById("pop2num9").value);
                 break;
             case 'pop2num0':
                 var T2 = $('#temp2');
-                T2.html( T2.html() + document.getElementById("pop2num0").value);
+                T2.html(T2.html() + document.getElementById("pop2num0").value);
                 break;
 
             case 'pop1':
@@ -215,10 +216,9 @@ $(document).ready(function() {
                 $('#temp1').html("");
                 $('#temp2').html("");
         }
-
     });
 
-});
+};
 
 
 Calc.init = function(){
