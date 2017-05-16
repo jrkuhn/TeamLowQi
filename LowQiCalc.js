@@ -15,7 +15,7 @@ window.onload = function () {
     Calc.T2 = $("#temp2").html();
 
     var body = $('body');
-    body.on("click tap", function(Se){
+    body.bind("click tap", function(Se){
         var action = Se.target.id;
 
         switch (action) {
