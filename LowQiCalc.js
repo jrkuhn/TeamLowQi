@@ -14,7 +14,7 @@ $(document).ready(function() {
     Calc.T1 = $("#temp1").html();
     Calc.T2 = $("#temp2").html();
 
-    $('body').on('click touch', function(e){
+    $('body').click(function(e){
         var action = e.target.id;
 
         switch(action){
