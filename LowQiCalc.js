@@ -29,7 +29,7 @@ window.onload = function () {
                     LP1.html(LP + numT1);
                 if (LP + numT1 > 9999) {
                     LP1.css('font-size', 52);
-                    LP1.css({"padding": "24px "});
+                    LP1.css({"padding": "25px "});
 
                 }
                 $('#pop1').hide();
@@ -60,7 +60,7 @@ window.onload = function () {
                     LP2.html(LP + numT2);
                 if (LP + numT2 > 9999) {
                     LP2.css('font-size', 52);
-                    LP2.css({"padding": "24px "});
+                    LP2.css({"padding": "25px "});
                 }
                 $('#pop2').hide();
                 T2.html("");
