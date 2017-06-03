@@ -58,7 +58,7 @@ window.onload = function () {
                 if (numT2 >= 0)
                     LP2.html(LP + numT2);
                 if (LP + numT2 > 9999) {
-                    LP2.css('font-size', 46);
+                    LP2.css('font-size', 56);
                     LP2.css({"padding": "24px "});
                 }
                 $('#pop2').hide();
