@@ -28,8 +28,9 @@ window.onload = function () {
                 if (numT1 >= 1)
                     LP1.html(LP + numT1);
                 if (LP + numT1 > 9999) {
-                    LP1.css('font-size', 46);
+                    LP1.css('font-size', 52);
                     LP1.css({"padding": "24px "});
+
                 }
                 $('#pop1').hide();
                 T1.html("");
@@ -58,7 +59,7 @@ window.onload = function () {
                 if (numT2 >= 0)
                     LP2.html(LP + numT2);
                 if (LP + numT2 > 9999) {
-                    LP2.css('font-size', 56);
+                    LP2.css('font-size', 52);
                     LP2.css({"padding": "24px "});
                 }
                 $('#pop2').hide();
@@ -94,6 +95,14 @@ window.onload = function () {
                 $('#LP2').html(8000);
                 $('#temp1').html("");
                 $('#temp2').html("");
+
+                var LP1 = $('#LP1');
+                LP1.css('font-size', 62);
+                LP1.css({"padding": "15px 0px 22px 0px"});
+
+                var LP2 = $('#LP2');
+                LP2.css('font-size', 62);
+                LP2.css({"padding": "15px 0px 22px 0px"});
                 break;
 
             case 'coin':
