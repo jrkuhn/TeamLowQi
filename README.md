@@ -5,4 +5,4 @@ This application allows you to keep track of lifepoints or other game points in 
 It contains two pop-up calculators pointing in opposite directions for players sitting across from each other to utilize.
 The app also contains other commonly used features, such as a simulated coin flip or dice roll.
 
-![alt text](https://imgur.com/brTTkIL)
+![Alt text](https://imgur.com/brTTkIL "Calculator Preview")
