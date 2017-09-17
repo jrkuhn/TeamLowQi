@@ -6,6 +6,6 @@ It contains two pop-up calculators pointing in opposite directions for players s
 The app also contains other commonly used features, such as a simulated coin flip or dice roll.
 
 Test it out yourself at ![justinrkuhn.me/TeamLowQi]:http://justinrkuhn.me/TeamLowQi/
-<a href="http://justinrkuhn.me/TeamLowQi">justinrkuhn.me/TeamLowQi</a>
+
 
 ![Alt text](https://i.imgur.com/brTTkIL.png "Calculator Preview")
