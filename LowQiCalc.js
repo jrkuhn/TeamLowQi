@@ -99,12 +99,14 @@ window.onload = function () {
                 $('#temp2').html("");
 
                 var LP1 = $('#LP1');
-                LP1.css('font-size', 62);
-                LP1.css({"padding": "15px 0px 22px 0px"});
+                LP1.css('font-size', 61);
+                LP1.css({"padding-top": "23px "});
+                LP1.css({"padding-bottom": "27px "});
 
                 var LP2 = $('#LP2');
-                LP2.css('font-size', 62);
-                LP2.css({"padding": "15px 0px 22px 0px"});
+                LP2.css('font-size', 61);
+                LP2.css({"padding-top": "23px "});
+                LP2.css({"padding-bottom": "27px "});
                 break;
 
             case 'coin':
