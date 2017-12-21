@@ -28,8 +28,9 @@ window.onload = function () {
                 if (numT1 >= 1)
                     LP1.html(LP + numT1);
                 if (LP + numT1 > 9999) {
-                    LP1.css('font-size', 52);
-                    LP1.css({"padding": "25px "});
+                    LP1.css('font-size', 54);
+                    LP1.css({"padding-top": "27px "});
+                    LP1.css({"padding-bottom": "30px "});
 
                 }
                 $('#pop1').hide();
@@ -59,8 +60,9 @@ window.onload = function () {
                 if (numT2 >= 0)
                     LP2.html(LP + numT2);
                 if (LP + numT2 > 9999) {
-                    LP2.css('font-size', 52);
-                    LP2.css({"padding": "25px "});
+                    LP2.css('font-size', 54);
+                    LP2.css({"padding-top": "27px "});
+                    LP2.css({"padding-bottom": "30px "});
                 }
                 $('#pop2').hide();
                 T2.html("");
